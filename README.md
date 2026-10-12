@@ -1,0 +1,105 @@
+# Correlated Pauli Noise in Surface-Code Memory
+
+A classical quantum-error-correction simulation project studying how local correlated `XX` data-qubit errors affect rotated surface-code Z-memory circuits, and how decoder representation and correlation-aware matching affect logical failure rates.
+
+> This repository reports simulation findings for a chosen Pauli-noise model. It is not a hardware experiment, a threshold estimate, or a claim that the tested decoder is optimal for all circuit distributions.
+
+## Research questions
+
+- Does explicit vertical-neighbor `XX` pair noise increase logical failure relative to a matched-independent control?
+- Does the decoder's detector-error-model representation affect the distance-3 result?
+- How does correlation-aware MWPM compare with ordinary MWPM at distances 5 and 7?
+- Can matching-cost gates reduce decoding time while preserving most of the accuracy benefit?
+- Does tuning the decoder's assumed pair-event probability improve independent-seed performance?
+
+## Headline results
+
+- **DEM ordering matters at distance 3:** the correlated DEM audit found 12 singleton detector signatures with competing logical labels, while the tested control models at distances 3, 5, and 7 had no such conflicts. Reordering can alter predictions when PyMatching merges parallel edges with conflicting logical labels.
+- **Pair information matters at distances 5 and 7:** removing all correlated-pair information increased failures in all four tested grouped-ablation conditions. Correlation-aware matching also improved on ordinary MWPM in the dedicated same-shot comparisons.
+- **Exact distance-3 DEM-MAP is a benchmark:** the exhaustive Bayes risk for the DEM-defined distribution at `p_corr=0.0001` was 0.23669523%. This is exact for the represented DEM distribution, not automatically for every detail of the physical circuit.
+- **Gating is a trade-off:** distance-5 and distance-7 detector-weight gates delivered about 1.4–1.7× speedups in their reported tests. At distance 9, a matching-cost-per-detector gate produced about 1.2× speedup in the 5% screening-budget setting, with no statistically resolved failure-rate change in the fresh validation; this is not proof of equivalence.
+- **DEM-strength calibration remains inconclusive:** scaling pair probabilities in the decoder model by 1.25× slightly lowered the pooled fresh-sample estimate, but the multiple-comparison-adjusted confidence interval included zero.
+
+See [`FINAL_RESEARCH_REPORT.md`](FINAL_RESEARCH_REPORT.md) for methods, tables, caveats, and supporting references. A compact index of headline results is in [`FINAL_RESULTS_SUMMARY.csv`](FINAL_RESULTS_SUMMARY.csv).
+
+## Methods overview
+
+- **Simulator:** [Stim](https://github.com/quantumlib/Stim)
+- **Decoder:** [PyMatching](https://github.com/oscarhiggott/PyMatching)
+- **Noise:** `P_BASE = 0.001`, plus vertical adjacent-data-qubit correlated `XX` events at selected `p_corr` values.
+- **Control:** matched-independent noise with comparable single-qubit marginals.
+- **Code distances:** experiments across `d = 3, 5, 7, 9`, with distance-specific analyses and sample counts.
+- **Validation:** paired decoder comparisons, independent random seeds for selected candidates, and explicit separation of threshold-screening samples from holdout validation.
+
+## Environment setup
+
+The following direct-dependency pins are copied from the versions reported by the project's local release audit on 2026-10-11. They pin the main direct imports observed by the audit; they are not a full platform-specific lockfile. Record your exact Python version and a full `pip freeze` from the environment used for final results before making a release claim.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+Optional BP-OSD experiments also use `ldpc`; install those dependencies only when running that experiment family:
+
+```powershell
+python -m pip install -r requirements-bposd.txt
+```
+
+Record the exact interpreter and installed packages:
+
+```powershell
+python --version
+python -m pip freeze > requirements-lock-full.txt
+```
+
+Review `requirements-lock-full.txt` for machine-specific packages and paths before committing it. The lock file should be generated from the actual validated environment, not inferred from this template.
+
+## Suggested run order
+
+The original project contains multiple exploratory and diagnostic scripts. Run the baseline and core comparisons first, then reproduce specialized decoder analyses. The exact script names and required arguments should be checked in each file's `if __name__ == '__main__'` block before executing.
+
+1. Run the baseline circuit sanity check and save the generated circuit and baseline CSV.
+2. Run correlated-versus-matched-independent comparisons at the selected distances and `p_corr` values.
+3. Run the DEM parallel-edge/label-conflict audit and preserve both the audit CSV and log.
+4. Run ordinary versus correlation-aware decoder comparisons and grouped pair-information ablations.
+5. Run the distance-3 exact DEM-MAP and circuit-vs-DEM validation.
+6. Run gate threshold screening, freeze thresholds, then run independent-seed gate validation.
+7. Run the pair-strength calibration screening and its independent validation.
+8. Generate the reproducibility manifest after all final output files have been archived.
+
+Do not use screening samples as the final validation set. Preserve the original seed values when reproducing reported outputs; if changing seeds, label the run as a new replication.
+
+## Reproducibility
+
+The repository should preserve:
+
+- simulation scripts and their source hashes;
+- generated `.stim` circuits and `.dem` representations where relevant;
+- raw result CSVs and validation summaries;
+- random seeds, shot counts, distances/rounds, physical-noise parameters, decoder options, and thresholds;
+- Python and dependency versions;
+- benchmark hardware and timing conditions.
+
+The project includes `create_reproducibility_manifest_qec.py`, which can help inventory files and record file hashes. Verify that the manifest includes all input/output CSVs that support the final report.
+
+## Known caveats
+
+- The distance-3 correlated DEM has an identified parallel-edge logical-label ambiguity in the tested PyMatching construction path. Distance-3 results must explicitly state which ordering/graph-construction strategy was used.
+- Correlation-aware MWPM is not an exact maximum-likelihood decoder for every physical noise distribution.
+- `^` in a decomposed DEM does not mean that graphlike components should be treated as separate independent physical events.
+- Exact MAP enumerates all detector patterns and is practical only at the small distance tested.
+- A screened gate's risk budget is a selection criterion, not a guarantee on unseen samples.
+- Statistical non-significance should not be described as proof of identical performance.
+
+## References
+
+- Stim: https://github.com/quantumlib/Stim
+- PyMatching: https://github.com/oscarhiggott/PyMatching
+- PyMatching releases and correlated-matching notes: https://github.com/oscarhiggott/PyMatching/releases
+
+## License status
+
+No reuse license is granted at this time. See [`LICENSE_DECISION.md`](LICENSE_DECISION.md). If you intend others to reuse or modify the code, choose and add an explicit license before publishing.

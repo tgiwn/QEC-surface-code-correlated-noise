@@ -1,0 +1,5 @@
+# Core direct dependencies; versions reported by the local audit on 2026-10-11.
+numpy==2.5.3
+scipy==1.18.1
+stim==1.16.0
+pymatching==2.4.0

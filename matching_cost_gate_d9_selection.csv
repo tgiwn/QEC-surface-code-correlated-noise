@@ -1,0 +1,3 @@
+distance,p_base,metric,cutoff,screen_shots,screen_full_ca_failures,screen_gated_failures,extra_failures,extra_fraction_vs_ca,routed_fraction,risk_budget
+9,0.001,mwpm_total_cost,57.27818367006952,10000000,150,164,14,0.09333333333333334,0.175,0.1
+9,0.001,mwpm_cost_per_detector,3.353766541575269,10000000,150,164,14,0.09333333333333334,0.4,0.1

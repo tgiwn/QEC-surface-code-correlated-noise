@@ -1,0 +1,39 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors and OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files and logs
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# NOTE: Intentionally do NOT ignore CSV, .stim, or .dem files by default.
+# Review file sizes and commit the data needed to reproduce the reported results.
+
+# Local release packaging and machine-specific audit outputs
+github_release_kit_qec/
+github_release_kit_qec.zip
+RELEASE_READINESS_AUDIT.md
+final_reproducibility_manifest.csv
+final_reproducibility_manifest.md
+
+# Local release packaging and machine-specific audit outputs
+github_release_kit_qec/
+github_release_kit_qec.zip
+RELEASE_READINESS_AUDIT.md
+final_reproducibility_manifest.csv
+final_reproducibility_manifest.md

@@ -1,0 +1,7 @@
+distance,p_base,metric,risk_budget,cutoff,screen_route_fraction,screen_ca_failures,screen_gated_failures,screen_extra_failures,screen_extra_fraction_vs_ca,source_screen_csv
+9,0.001,mwpm_total_cost,0.025,41.077525611415446,0.4500006,150,150,0,0.0,matching_cost_gate_d9_screen.csv
+9,0.001,mwpm_total_cost,0.05,46.11629961856721,0.3500008,150,157,7,0.04666666666666667,matching_cost_gate_d9_screen.csv
+9,0.001,mwpm_total_cost,0.1,57.27818367006952,0.175,150,164,14,0.09333333333333334,matching_cost_gate_d9_screen.csv
+9,0.001,mwpm_cost_per_detector,0.025,3.225046998418969,0.6000032,150,153,3,0.02,matching_cost_gate_d9_screen.csv
+9,0.001,mwpm_cost_per_detector,0.05,3.3199579266150616,0.45,150,157,7,0.04666666666666667,matching_cost_gate_d9_screen.csv
+9,0.001,mwpm_cost_per_detector,0.1,3.353766541575269,0.4,150,164,14,0.09333333333333334,matching_cost_gate_d9_screen.csv
