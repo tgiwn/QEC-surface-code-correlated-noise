@@ -1,4 +1,0 @@
-timestamp,pair_name,qubit_ids,distance,rounds,p,p_corr,shots,ordinary_failures,control_aware_failures,full_model_aware_failures,control_only_failures,full_model_only_failures,mcnemar_p_control_vs_full
-2026-10-10T02:10:43+08:00,pair_12_34,"12,34",5,5,0.001,0.0004,10000000,158,104,115,1,12,0.00341796875
-2026-10-10T02:11:05+08:00,pair_12_25,"12,25",5,5,0.001,0.0004,10000000,48,40,39,1,0,1.0
-2026-10-10T02:11:30+08:00,pair_12_36,"12,36",5,5,0.001,0.0004,10000000,206,143,158,5,20,0.004077315330505371
