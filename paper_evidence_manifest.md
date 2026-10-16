@@ -1,10 +1,11 @@
 # Curated QEC Paper-Evidence Manifest
 
-- Generated UTC: `2026-10-16T02:25:10+00:00`
+- Generated UTC: `2026-10-16T22:50:14+00:00`
 - Python: `3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]`
 - Platform: `Windows-11-10.0.26300-SP0`
-- Base commit before release curation: `e77788a0e8384faeef6e379b9fd35772154dbe28`
-- Working tree clean: `no` (untracked exploratory artifacts are excluded)
+- Source HEAD before this refresh: `04161d885059e91ccf270c9cf0ec8efee9f6340b`
+- Original base commit before release curation: `e77788a0e8384faeef6e379b9fd35772154dbe28`
+- Working tree clean before this refresh: `yes` (ignored local files are excluded)
 - Files hashed: **55**
 - Missing candidate paths: **0**
 
@@ -27,6 +28,8 @@ The claim-family labels are organizational aids, not proof that a particular scr
 Each `size_bytes` and `sha256` value describes the exact bytes stored in the Git blob at manifest curation time, not necessarily the bytes in a local checkout. Git's `core.autocrlf` can change line endings in Windows working copies. To verify these values, compare them with the corresponding Git blob (for example, `git show HEAD:<path>` after the commit, or the index blob before the commit). These hashes do not establish scientific validity, independent replication, or prove that every working-tree file is represented by the commit.
 
 The public evidence set excludes the obsolete top-level distance-9 benchmark script, the duplicate root-level distance-3 reproducer, and two multi-seed strength-sweep CSVs not discussed in the final report. These files are retained locally and can be published later with a documented source-to-result link if they become part of the paper.
+
+Machine-specific absolute project paths in the included run metadata were replaced with `<LOCAL_PROJECT_ROOT>` for portability. Experiment settings, seeds, package details, and relative artifact names were preserved.
 
 ## Evidence families
 

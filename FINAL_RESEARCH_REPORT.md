@@ -2,7 +2,7 @@
 
 **Research report — consolidated draft**
 **Simulation setting:** `P_BASE = 0.001`; rotated surface-code Z-memory circuits; code distances 3, 5, 7, and 9 across different experiments.
-**Tools:** Stim, PyMatching, NumPy, and selected SciPy/LDPC tooling for additional decoder tests.
+**Tools:** Stim, PyMatching, and NumPy for the scripts included in this curated release. The recorded research environment also had SciPy and `ldpc` installed, but no script in this snapshot imports them directly.
 
 > **Scope note.** This report consolidates results reported in the experiment logs available during this project. Several tables come from separate runs with different seeds and shot counts; they should not be interpreted as a single pooled experiment unless explicitly labeled pooled. Before publication, verify each reported number against the archived CSV for that run and record the exact package versions and Git commit.
 
@@ -61,7 +61,7 @@ An audit found the following numbers of potential parallel-edge logical-label co
 
 At distance 3, the 12 conflicting singleton detector signatures were `D0`, `D1`, `D2`, `D3`, `D5`, `D7`, `D8`, `D10`, `D13`, `D15`, `D16`, and `D18`. The same detector signature could be produced by one mechanism with no logical-observable label and another carrying `L0`. The audit traced examples to a mixture of injected correlated `XX` events and background Pauli-error mechanisms.
 
-In the tested PyMatching graph-loading path, the order of equivalent DEM instructions changed predictions when a merged parallel-edge class had competing logical labels. Across the complete distance-3 DEM, the audit found prediction changes under reordering; repeated correlated-circuit tests showed the observed logical-failure estimate could shift from roughly 0.90% under the original order to roughly 0.25% under the revised/prioritized construction. One 500,000-shot comparison recorded 4,527 failures (0.9054%) for ordinary matching in the original order and 1,275 (0.2550%) for reversed order; the probability-prioritized graph also recorded 1,275 failures, with zero prediction changes in that sample under order reversal.
+In the saved 500,000-shot physical-circuit comparisons, at `p_corr = 0.0001` (seed `20261080`), ordinary matching on the original DEM recorded 4,610 failures (0.9220%), while ordinary matching on the canonical-sorted DEM and the probability-prioritized graph each recorded 1,260 failures (0.2520%). At `p_corr = 0.0002` (seed `20261081`), the corresponding counts were 5,437 (1.0874%) for the original DEM and 2,239 (0.4478%) for each of the canonical-sorted and probability-prioritized decoders. On the same sampled syndromes, predictions from the latter decoders differed from `ordinary/original` for 3,678 samples at `p_corr = 0.0001` and 3,902 at `p_corr = 0.0002`. See the [raw comparison CSV](results/exact_map_validation_reproduction/archive_old_comparison_20261014_014348/exact_map_distance3_comparison_raw.csv) and [run provenance](results/exact_map_validation_reproduction/archive_old_comparison_20261014_014348/provenance.txt). The `canonical_equal_from_reversed` field confirms canonicalization stability of the DEM text; it does not demonstrate prediction equivalence under instruction-order changes. Separately, the deterministic low-weight-syndrome audit found changed predictions for 38 of 300 tested syndromes (12.6667%), which is not an estimate of the overall physical-circuit failure rate.
 
 **Interpretation:** this is a decoder-representation sensitivity, not evidence that changing DEM text order changes the underlying physical noise. PyMatching's documentation notes that parallel edges are merged and that the logical-observable indices for merged parallel edges are retained from the first added edge. That behavior is material when the input contains conflicting labels ([PyMatching source/documentation](https://github.com/oscarhiggott/PyMatching/blob/master/src/pymatching/matching.py)).
 
@@ -233,7 +233,7 @@ Before publishing the repository, archive or record:
 - The exact DEM construction and error-instruction ordering strategy.
 - Machine and timing setup for any speedup claim.
 
-The `create_reproducibility_manifest_qec.py` script can help inventory source files and their hashes. Run it in the project root, then confirm that its output includes the archived CSVs used in the report.
+The curated evidence inventory is provided in `paper_evidence_manifest.csv` and `paper_evidence_manifest.md`. It records hashes for selected release artifacts; it does not inventory every local exploratory file or establish scientific validity on its own. For each quantitative claim, inspect the cited raw output and run provenance.
 
 ## 7. References
 

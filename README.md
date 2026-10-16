@@ -42,11 +42,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-Optional BP-OSD experiments also use `ldpc`; install those dependencies only when running that experiment family:
-
-```powershell
-python -m pip install -r requirements-bposd.txt
-```
+`requirements-bposd.txt` is an optional dependency profile for BP-OSD extensions. BP-OSD experiment scripts are not included in this curated snapshot, so this file is not required to run the scripts shipped here.
 
 Record the exact interpreter and installed packages:
 
@@ -68,7 +64,7 @@ The original project contains multiple exploratory and diagnostic scripts. Run t
 5. Run the distance-3 exact DEM-MAP and circuit-vs-DEM validation.
 6. Run gate threshold screening, freeze thresholds, then run independent-seed gate validation.
 7. Run the pair-strength calibration screening and its independent validation.
-8. Generate the reproducibility manifest after all final output files have been archived.
+8. After freezing the included report and evidence set, verify that `paper_evidence_manifest.csv` matches the selected files and that every quantitative claim points to saved output and run provenance.
 
 Do not use screening samples as the final validation set. Preserve the original seed values when reproducing reported outputs; if changing seeds, label the run as a new replication.
 
@@ -83,7 +79,7 @@ The repository should preserve:
 - Python and dependency versions;
 - benchmark hardware and timing conditions.
 
-The project includes `create_reproducibility_manifest_qec.py`, which can help inventory files and record file hashes. Verify that the manifest includes all input/output CSVs that support the final report.
+The curated evidence inventory is provided in `paper_evidence_manifest.csv` and `paper_evidence_manifest.md`. It records hashes for selected release artifacts; it is not a complete inventory of every local experiment and does not by itself prove scientific validity or every source-to-output relationship.
 
 ## Known caveats
 
@@ -100,6 +96,10 @@ The project includes `create_reproducibility_manifest_qec.py`, which can help in
 - PyMatching: https://github.com/oscarhiggott/PyMatching
 - PyMatching releases and correlated-matching notes: https://github.com/oscarhiggott/PyMatching/releases
 
-## License status
+## License
 
-No reuse license is granted at this time. See [`LICENSE_DECISION.md`](LICENSE_DECISION.md). If you intend others to reuse or modify the code, choose and add an explicit license before publishing.
+The project's original code is licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
+
+This license applies only to materials for which the project contributors have the necessary rights to grant it. The research manuscript, figures, and research data are not automatically covered by Apache-2.0. These materials do not currently have a separate reuse license. Third-party software and external materials remain subject to their applicable licenses and terms.
+
+See [LICENSE_DECISION.md](LICENSE_DECISION.md) for details about the licensing scope.
