@@ -1,39 +1,51 @@
 experiment,distance,p_corr,physical_model,method,logical_error_percent,compare_to,delta_percentage_points,95pct_CI_percentage_points,routed_percent,speedup,notes
-pair_ablation,5,0.0001,fully_correlated,remove_all_pair_information,,,,,,"Reported excess failures +0.02460 pp versus full pair-information model; family-wise CI passed"
-pair_ablation,5,0.0002,fully_correlated,remove_all_pair_information,,,,,,"Reported excess failures +0.05600 pp versus full pair-information model; family-wise CI passed"
-pair_ablation,7,0.0001,fully_correlated,remove_all_pair_information,,,,,,"Reported excess failures +0.00720 pp versus full pair-information model; family-wise CI passed"
-pair_ablation,7,0.0002,fully_correlated,remove_all_pair_information,,,,,,"Reported excess failures +0.02500 pp versus full pair-information model; family-wise CI passed"
-correlation_aware_comparison,5,0.0001,fully_correlated,ordinary_MWPM,0.05520,,,,,,"Separate dedicated decoder-comparison run"
-correlation_aware_comparison,5,0.0001,fully_correlated,correlation_aware_MWPM,0.04580,,,,,,"Separate dedicated decoder-comparison run"
-correlation_aware_comparison,5,0.0002,fully_correlated,ordinary_MWPM,0.10020,,,,,,"Separate dedicated decoder-comparison run"
-correlation_aware_comparison,5,0.0002,fully_correlated,correlation_aware_MWPM,0.07810,,,,,,"Separate dedicated decoder-comparison run"
-correlation_aware_comparison,7,0.0001,fully_correlated,ordinary_MWPM,0.01180,,,,,,"Separate dedicated decoder-comparison run"
-correlation_aware_comparison,7,0.0001,fully_correlated,correlation_aware_MWPM,0.00785,,,,,,"Separate dedicated decoder-comparison run"
-correlation_aware_comparison,7,0.0002,fully_correlated,ordinary_MWPM,0.02185,,,,,,"Separate dedicated decoder-comparison run"
-correlation_aware_comparison,7,0.0002,fully_correlated,correlation_aware_MWPM,0.01460,,,,,,"Separate dedicated decoder-comparison run"
-weight_gate_validation,5,0.0001,fully_correlated,ordinary_MWPM,0.05607,,,,,,"Pooled 3 x 1m fresh-validation shots"
-weight_gate_validation,5,0.0001,fully_correlated,full_CA,0.04567,,,,,,"Pooled 3 x 1m fresh-validation shots"
-weight_gate_validation,5,0.0001,fully_correlated,weight_gate,0.04837,,,,10,1.62,"Threshold detector weight >=5"
-weight_gate_validation,5,0.0002,fully_correlated,ordinary_MWPM,0.09860,,,,,,"Pooled 3 x 1m fresh-validation shots"
-weight_gate_validation,5,0.0002,fully_correlated,full_CA,0.07603,,,,,,"Pooled 3 x 1m fresh-validation shots"
-weight_gate_validation,5,0.0002,fully_correlated,weight_gate,0.07973,,,,10,1.66,"Threshold detector weight >=5"
-weight_gate_validation,7,0.0001,fully_correlated,ordinary_MWPM,0.01137,,,,,,"Pooled 3 x 2m fresh-validation shots"
-weight_gate_validation,7,0.0001,fully_correlated,full_CA,0.00665,,,,,,"Pooled 3 x 2m fresh-validation shots"
-weight_gate_validation,7,0.0001,fully_correlated,weight_gate,0.00697,,,,26.2,1.43,"Threshold detector weight >=8"
-weight_gate_validation,7,0.0002,fully_correlated,ordinary_MWPM,0.02238,,,,,,"Pooled 3 x 2m fresh-validation shots"
-weight_gate_validation,7,0.0002,fully_correlated,full_CA,0.01520,,,,,,"Pooled 3 x 2m fresh-validation shots"
-weight_gate_validation,7,0.0002,fully_correlated,weight_gate,0.01585,,,,26.7,1.41,"Threshold detector weight >=8"
+pair_ablation,5,0.0001,fully_correlated,remove_all_pair_information,,,,,,,Reported excess failures +0.02460 pp versus full pair-information model; family-wise CI passed
+pair_ablation,5,0.0002,fully_correlated,remove_all_pair_information,,,,,,,Reported excess failures +0.05600 pp versus full pair-information model; family-wise CI passed
+pair_ablation,7,0.0001,fully_correlated,remove_all_pair_information,,,,,,,Reported excess failures +0.00720 pp versus full pair-information model; family-wise CI passed
+pair_ablation,7,0.0002,fully_correlated,remove_all_pair_information,,,,,,,Reported excess failures +0.02500 pp versus full pair-information model; family-wise CI passed
+correlation_aware_comparison,5,0.0001,fully_correlated,ordinary_MWPM,0.05520,,,,,,Separate dedicated decoder-comparison run
+correlation_aware_comparison,5,0.0001,fully_correlated,correlation_aware_MWPM,0.04580,,,,,,Separate dedicated decoder-comparison run
+correlation_aware_comparison,5,0.0002,fully_correlated,ordinary_MWPM,0.10020,,,,,,Separate dedicated decoder-comparison run
+correlation_aware_comparison,5,0.0002,fully_correlated,correlation_aware_MWPM,0.07810,,,,,,Separate dedicated decoder-comparison run
+correlation_aware_comparison,7,0.0001,fully_correlated,ordinary_MWPM,0.01180,,,,,,Separate dedicated decoder-comparison run
+correlation_aware_comparison,7,0.0001,fully_correlated,correlation_aware_MWPM,0.00785,,,,,,Separate dedicated decoder-comparison run
+correlation_aware_comparison,7,0.0002,fully_correlated,ordinary_MWPM,0.02185,,,,,,Separate dedicated decoder-comparison run
+correlation_aware_comparison,7,0.0002,fully_correlated,correlation_aware_MWPM,0.01460,,,,,,Separate dedicated decoder-comparison run
+weight_gate_validation,5,0.0001,fully_correlated,ordinary_MWPM,0.05607,,,,,,Pooled 3 x 1m fresh-validation shots
+weight_gate_validation,5,0.0001,fully_correlated,full_CA,0.04567,,,,,,Pooled 3 x 1m fresh-validation shots
+weight_gate_validation,5,0.0001,fully_correlated,weight_gate,0.04837,,,,10,1.62,Threshold detector weight >=5
+weight_gate_validation,5,0.0002,fully_correlated,ordinary_MWPM,0.09860,,,,,,Pooled 3 x 1m fresh-validation shots
+weight_gate_validation,5,0.0002,fully_correlated,full_CA,0.07603,,,,,,Pooled 3 x 1m fresh-validation shots
+weight_gate_validation,5,0.0002,fully_correlated,weight_gate,0.07973,,,,10,1.66,Threshold detector weight >=5
+weight_gate_validation,7,0.0001,fully_correlated,ordinary_MWPM,0.01137,,,,,,Pooled 3 x 2m fresh-validation shots
+weight_gate_validation,7,0.0001,fully_correlated,full_CA,0.00665,,,,,,Pooled 3 x 2m fresh-validation shots
+weight_gate_validation,7,0.0001,fully_correlated,weight_gate,0.00697,,,,26.2,1.43,Threshold detector weight >=8
+weight_gate_validation,7,0.0002,fully_correlated,ordinary_MWPM,0.02238,,,,,,Pooled 3 x 2m fresh-validation shots
+weight_gate_validation,7,0.0002,fully_correlated,full_CA,0.01520,,,,,,Pooled 3 x 2m fresh-validation shots
+weight_gate_validation,7,0.0002,fully_correlated,weight_gate,0.01585,,,,26.7,1.41,Threshold detector weight >=8
 d9_cost_gate_validation,9,0.0001,fully_correlated,full_CA,0.00088,,,,,,"Pooled 6m shots, later risk-budget validation"
-d9_cost_gate_validation,9,0.0001,fully_correlated,cost_per_detector_budget_0.05,0.00095,full_CA,0.000067,"[-0.000013,+0.000147]",44.4,1.22,"95% CI includes zero; not proof of equivalence"
-d9_cost_gate_validation,9,0.0001,fully_correlated,total_cost_budget_0.10,0.00092,full_CA,0.000033,"[-0.000080,+0.000146]",17.2,1.55,"95% CI includes zero"
+d9_cost_gate_validation,9,0.0001,fully_correlated,cost_per_detector_budget_0.05,0.00095,full_CA,0.000067,"[-0.000013,+0.000147]",44.4,1.22,95% CI includes zero; not proof of equivalence
+d9_cost_gate_validation,9,0.0001,fully_correlated,total_cost_budget_0.10,0.00092,full_CA,0.000033,"[-0.000080,+0.000146]",17.2,1.55,95% CI includes zero
 d9_cost_gate_validation,9,0.0002,fully_correlated,full_CA,0.00198,,,,,,"Pooled 6m shots, later risk-budget validation"
-d9_cost_gate_validation,9,0.0002,fully_correlated,cost_per_detector_budget_0.05,0.00205,full_CA,0.000067,"[-0.000046,+0.000180]",45.6,1.20,"95% CI includes zero; not proof of equivalence"
-d9_cost_gate_validation,9,0.0002,fully_correlated,total_cost_budget_0.10,0.00253,full_CA,0.000550,"[+0.000341,+0.000759]",17.8,1.55,"CI excludes zero; statistically supported error increase"
-dem_strength_validation,5,0.0001,mixed,scale_1.00,0.04830,,,,,,"Fresh validation; 1m shots per condition"
-dem_strength_validation,5,0.0001,mixed,scale_1.25,0.04770,scale_1.00,-0.000600,"[-0.001519,+0.000319]",,,"CI includes zero"
-dem_strength_validation,5,0.0002,mixed,scale_1.00,0.07950,,,,,,"Fresh validation; 1m shots per condition"
-dem_strength_validation,5,0.0002,mixed,scale_1.25,0.07940,scale_1.00,-0.000100,"[-0.001631,+0.001431]",,,"CI includes zero"
-dem_strength_validation,7,0.0001,mixed,scale_1.00,0.00750,,,,,,"Fresh validation; 1m shots per condition"
-dem_strength_validation,7,0.0001,mixed,scale_1.25,0.00720,scale_1.00,-0.000300,"[-0.000639,+0.000039]",,,"CI includes zero"
-dem_strength_validation,7,0.0002,mixed,scale_1.00,0.01600,,,,,,"Fresh validation; 1m shots per condition"
-dem_strength_validation,7,0.0002,mixed,scale_1.25,0.01590,scale_1.00,-0.000100,"[-0.000296,+0.000096]",,,"CI includes zero"
+d9_cost_gate_validation,9,0.0002,fully_correlated,cost_per_detector_budget_0.05,0.00205,full_CA,0.000067,"[-0.000046,+0.000180]",45.6,1.20,95% CI includes zero; not proof of equivalence
+d9_cost_gate_validation,9,0.0002,fully_correlated,total_cost_budget_0.10,0.00253,full_CA,0.000550,"[+0.000341,+0.000759]",17.8,1.55,CI excludes zero; statistically supported error increase
+dem_strength_validation,5,0.0001,mixed,scale_1.00,0.04830,,,,,,Fresh validation; 1m shots per condition
+dem_strength_validation,5,0.0001,mixed,scale_1.25,0.04770,scale_1.00,-0.000600,"[-0.001519,+0.000319]",,,CI includes zero
+dem_strength_validation,5,0.0002,mixed,scale_1.00,0.07950,,,,,,Fresh validation; 1m shots per condition
+dem_strength_validation,5,0.0002,mixed,scale_1.25,0.07940,scale_1.00,-0.000100,"[-0.001631,+0.001431]",,,CI includes zero
+dem_strength_validation,7,0.0001,mixed,scale_1.00,0.00750,,,,,,Fresh validation; 1m shots per condition
+dem_strength_validation,7,0.0001,mixed,scale_1.25,0.00720,scale_1.00,-0.000300,"[-0.000639,+0.000039]",,,CI includes zero
+dem_strength_validation,7,0.0002,mixed,scale_1.00,0.01600,,,,,,Fresh validation; 1m shots per condition
+dem_strength_validation,7,0.0002,mixed,scale_1.25,0.01590,scale_1.00,-0.000100,"[-0.000296,+0.000096]",,,CI includes zero
+d9_detector_weight_gate_standardized,9,0.0001,fully_correlated,ordinary_MWPM,0.003,,,,,,"300000 shots; failures=9; 3x100000 replicates; seeds=2026101601;2027101601;2028101601; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0001,fully_correlated,full_CA,0.0013333333,,,,,,"300000 shots; failures=4; 3x100000 replicates; seeds=2026101601;2027101601;2028101601; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0001,fully_correlated,detector_weight_gate_ge12,0.0013333333,full_CA,0,,50.826,1.265746,"300000 shots; failures=4; 3x100000 replicates; seeds=2026101601;2027101601;2028101601; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt; full_CA_seconds=4.258682; gated_seconds=3.364562; zero observed paired disagreements; not proof of equivalence"
+d9_detector_weight_gate_standardized,9,0.0001,matched-independent-control,ordinary_MWPM,0.0003333333,,,,,,"300000 shots; failures=1; 3x100000 replicates; seeds=2026101600;2027101600;2028101600; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0001,matched-independent-control,full_CA,0.0003333333,,,,,,"300000 shots; failures=1; 3x100000 replicates; seeds=2026101600;2027101600;2028101600; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0001,matched-independent-control,detector_weight_gate_ge12,0.0003333333,full_CA,0,,51.9233,1.097669,"300000 shots; failures=1; 3x100000 replicates; seeds=2026101600;2027101600;2028101600; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt; full_CA_seconds=3.443126; gated_seconds=3.136762; zero observed paired disagreements; not proof of equivalence"
+d9_detector_weight_gate_standardized,9,0.0002,fully_correlated,ordinary_MWPM,0.003,,,,,,"300000 shots; failures=9; 3x100000 replicates; seeds=2026101701;2027101701;2028101701; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0002,fully_correlated,full_CA,0.0013333333,,,,,,"300000 shots; failures=4; 3x100000 replicates; seeds=2026101701;2027101701;2028101701; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0002,fully_correlated,detector_weight_gate_ge12,0.0013333333,full_CA,0,,51.7793,1.16856,"300000 shots; failures=4; 3x100000 replicates; seeds=2026101701;2027101701;2028101701; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt; full_CA_seconds=4.152254; gated_seconds=3.553308; zero observed paired disagreements; not proof of equivalence"
+d9_detector_weight_gate_standardized,9,0.0002,matched-independent-control,ordinary_MWPM,0.0003333333,,,,,,"300000 shots; failures=1; 3x100000 replicates; seeds=2026101700;2027101700;2028101700; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0002,matched-independent-control,full_CA,0.0003333333,,,,,,"300000 shots; failures=1; 3x100000 replicates; seeds=2026101700;2027101700;2028101700; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt"
+d9_detector_weight_gate_standardized,9,0.0002,matched-independent-control,detector_weight_gate_ge12,0.0003333333,full_CA,0,,53.4967,1.213704,"300000 shots; failures=1; 3x100000 replicates; seeds=2026101700;2027101700;2028101700; source=results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv, summary.csv, run_metadata.txt; full_CA_seconds=4.109446; gated_seconds=3.38587; zero observed paired disagreements; not proof of equivalence"

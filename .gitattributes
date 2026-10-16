@@ -1,0 +1,2 @@
+# Keep checksum-verified distance-3 evidence text byte-stable across platforms.
+results/paper_evidence/distance3_order_sensitivity_20261014_015625/** text eol=lf

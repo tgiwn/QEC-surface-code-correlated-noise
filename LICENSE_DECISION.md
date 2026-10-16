@@ -1,7 +1,31 @@
-# License decision (current status)
+# License Decision
 
-**Decision for this release draft: no reuse license is granted yet.**
+Decision date: 2026-10-15
 
-This project may be publicly viewable, but no explicit permission is granted here to copy, redistribute, modify, or reuse the code beyond rights that may apply by law. This is not an open-source license.
+## Project code
 
-If you want others to reuse the project, replace this decision note with an explicit license (for example, MIT or Apache-2.0) after deciding which terms you want. Do not add a standard license merely to make an audit pass.
+The project’s original code is licensed under the Apache License, Version 2.0,
+as specified in the repository's LICENSE file.
+
+This decision applies only to materials for which the project contributors
+have the necessary rights to grant this license. Third-party software,
+external data, and other materials retain their applicable licenses unless
+explicitly stated otherwise.
+
+## Research paper and associated materials
+
+The manuscript, figures, and research data are not automatically licensed
+under Apache-2.0 merely because they are included in this repository.
+Their licensing and publication terms will be determined separately,
+including any applicable publisher agreement.
+
+## Release requirements
+
+Before public release:
+
+- Verify that LICENSE contains the complete, correct Apache-2.0 license text.
+- Review third-party code, data, and attribution requirements.
+- Ensure the repository's licensing statements are consistent.
+- Preserve experiment configurations, provenance, and reproducibility records.
+
+This document records the project's licensing decision and is not legal advice.

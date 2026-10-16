@@ -132,7 +132,7 @@ The distance-5 pooled gate validation used three replicates of one million shots
 
 #### Distance 9: matching-cost gates
 
-The more extensive distance-9 validation used three independent replicates of two million shots per condition (six million shots per pooled condition). The detector-weight gate `weight >= 12` routed roughly 52% of samples and had no measured speed advantage. Matching-cost scores were more useful.
+The distance-9 matching-cost validation used three independent replicates of two million shots per condition (six million shots per pooled condition). Its results are summarized below. A separate standardized timing benchmark of the detector-weight gate `weight >= 12` was conducted on October 15, 2026, and is reported in the additional subsection below. The two experiments used different sample sizes and timing protocols and should not be conflated.
 
 The latest independent validation gives:
 
@@ -150,6 +150,41 @@ For the cost-per-detector 5% setting, the pooled gate-minus-full-CA difference w
 For the total-cost 10% setting, the pooled gate-minus-full-CA difference at `p_corr=0.0002` was +0.000550 percentage points (95% CI `[+0.000341, +0.000759]`). This is a statistically supported increase in failures. At `p_corr=0.0001`, the observed increase was smaller and its confidence interval included zero.
 
 **Interpretation:** a 5% screening budget is not a guarantee of a 5% relative increase on fresh samples. Of the tested distance-9 options, the cost-per-detector score at its 5% setting is the more defensible compromise for further work; full CA remains the reference when accuracy is the priority.
+
+#### Standardized detector-weight-gate benchmark (2026-10-15)
+
+A separate distance-9 benchmark used nine rounds, `p_base = 0.001`, and a
+detector-weight threshold of 12. Each physical-model/strength condition used
+three replicates of 100,000 shots (300,000 shots per condition; 1.2 million
+shots total). Syndromes with detector weight below 12 were decoded by ordinary
+MWPM; those at or above 12 were decoded by correlation-aware MWPM.
+
+Each decoding path was warmed on a separate 2,048-shot batch, excluded from
+timing. Sampling and failure bookkeeping were excluded; weight calculation and
+selective decoding were included. The benchmark used 25,000-shot chunks and
+alternated decoder call order by chunk.
+
+| `p_corr` | Physical model | Ordinary failures | Full CA failures | Gated failures | Routed to CA | Full CA time (s) | Gated time (s) | Speedup |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|
+| 0.0001 | Fully correlated | 9/300,000 | 4/300,000 | 4/300,000 | 50.826% | 4.258682 | 3.364562 | 1.266x |
+| 0.0001 | Matched-independent control | 1/300,000 | 1/300,000 | 1/300,000 | 51.923% | 3.443126 | 3.136762 | 1.098x |
+| 0.0002 | Fully correlated | 9/300,000 | 4/300,000 | 4/300,000 | 51.779% | 4.152254 | 3.553308 | 1.169x |
+| 0.0002 | Matched-independent control | 1/300,000 | 1/300,000 | 1/300,000 | 53.497% | 4.109446 | 3.385870 | 1.214x |
+
+Across the four conditions, full correlation-aware decoding took 15.963508
+seconds and the gated path took 13.440502 seconds: a combined measured
+speedup of 1.188x and a 15.8% reduction in decoding time under this protocol.
+
+No gate-only or full-CA-only logical-failure classifications were observed
+among the 1.2 million paired shots. This is empirical agreement on the sampled
+data, not proof of statistical equivalence. Each condition had only one or
+four logical failures per decoder. These timing results are separate from the
+six-million-shot matching-cost-gate validation above.
+
+Raw evidence:
+`results/paper_evidence/d9_gate_standardized_20261015_024110/replicates.csv`,
+`summary.csv`, and `run_metadata.txt`.
+
 
 ### Finding E — increasing decoder pair strength to 1.25× was inconclusive
 

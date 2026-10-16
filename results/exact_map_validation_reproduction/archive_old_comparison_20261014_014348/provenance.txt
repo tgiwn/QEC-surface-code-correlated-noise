@@ -1,0 +1,14 @@
+﻿Archived at: 2026-10-14T01:43:48.6288929+08:00
+Git commit: d09d6ee4877f360551ccc2c967ea85003ca16d03
+Source script: compare_exact_map_distance3.py
+Source SHA256: 620220D735327A743F0E8274F588A6EBC70D3E494B0E9798213F6876167F42B1
+Raw CSV: exact_map_distance3_comparison_raw.csv
+Raw CSV SHA256: 988282DD994D0F1008074C4291E50A2953A49E14EBF7259C301AF4F8D643A0D8
+Distance: 3
+Rounds: 3
+P_BASE: 0.001
+P_CORR values: 0.0001, 0.0002
+Shots per condition: 500000
+Seeds: 20261080, 20261081
+Data source: physical-circuit samples
+MAP posterior: calculated from the flattened DEM

@@ -1,0 +1,5 @@
+﻿"timestamp","distance","rounds","p_base","p_corr","physical_model","decoder_mode","num_detectors","num_observables","num_dem_error_instructions","num_syndromes_tested","changed_predictions","changed_fraction"
+"20261014_015625","3","3","0.001","0.0001","correlated","ordinary","24","1","298","300","38","0.12666666666666668"
+"20261014_015625","3","3","0.001","0.0001","correlated","correlation_aware","24","1","298","300","38","0.12666666666666668"
+"20261014_015625","3","3","0.001","0.0002","correlated","ordinary","24","1","298","300","38","0.12666666666666668"
+"20261014_015625","3","3","0.001","0.0002","correlated","correlation_aware","24","1","298","300","38","0.12666666666666668"

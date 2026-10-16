@@ -1,0 +1,10 @@
+Minimal distance-3 DEM order reproducer
+Timestamp: 2026-10-14T01:56:25.784849+08:00
+Python: 3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]
+Stim: 1.16.0
+PyMatching: 2.4.0
+NumPy: 2.5.3
+d=3; rounds=3; p_base=0.001; p_corr=(0.0001, 0.0002)
+No physical-circuit Monte Carlo shots were sampled.
+Project DEM comparison uses all 24 weight-1 and all 276 weight-2 syndromes.
+Synthetic test shows order sensitivity: True
