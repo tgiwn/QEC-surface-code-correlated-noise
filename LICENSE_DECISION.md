@@ -19,13 +19,3 @@ under Apache-2.0 merely because they are included in this repository.
 Their licensing and publication terms will be determined separately,
 including any applicable publisher agreement.
 
-## Release requirements
-
-Before public release:
-
-- Verify that LICENSE contains the complete, correct Apache-2.0 license text.
-- Review third-party code, data, and attribution requirements.
-- Ensure the repository's licensing statements are consistent.
-- Preserve experiment configurations, provenance, and reproducibility records.
-
-This document records the project's licensing decision and is not legal advice.
