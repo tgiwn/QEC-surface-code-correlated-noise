@@ -1,0 +1,3 @@
+distance,rounds,p_base,p_corr,seed,shots,priority_original_failures,priority_reversed_failures,priority_sorted_input_failures,ordinary_sorted_dem_failures,priority_predictions_changed_original_vs_reversed,priority_predictions_changed_original_vs_sorted_input,priority_original_vs_ordinary_sorted_prediction_disagreements,paired_delta_reversed_minus_original_pp,paired_ci_low_pp,paired_ci_high_pp,paired_delta_sorted_input_minus_original_pp,paired_sorted_ci_low_pp,paired_sorted_ci_high_pp
+3,3,0.001,0.0001,20261080,500000,1260,1260,1260,1260,0,0,0,0,0,0,0,0,0
+3,3,0.001,0.0002,20261081,500000,2239,2239,2239,2239,0,0,0,0,0,0,0,0,0
