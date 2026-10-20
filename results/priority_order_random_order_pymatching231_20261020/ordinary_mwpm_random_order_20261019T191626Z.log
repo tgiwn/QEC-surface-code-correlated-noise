@@ -1,0 +1,128 @@
+Ordinary MWPM randomized DEM error-order sensitivity audit
+Python=3.13.15 Stim=1.16.0 PyMatching=2.3.1 NumPy=2.5.3
+d=3; rounds=3; p_base=0.001; shots/condition=500,000; random permutations/condition=50
+Script SHA256=bb61c7406e6fee4ece8a255040970a417fb15415e0efa5792abb5859346a256a
+
+==============================================================================
+p_corr=0.0001; physical sample seed=20261080
+DEM detectors=24; observables=1; error instructions=298
+canonical_sorted seed=           failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+original         seed=           failures= 4,610/500,000 (0.922000%) disagreements_vs_sorted=3678
+reversed         seed=           failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610200 failures= 4,238/500,000 (0.847600%) disagreements_vs_sorted=3302
+random           seed= 202610201 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610202 failures= 4,238/500,000 (0.847600%) disagreements_vs_sorted=3302
+random           seed= 202610203 failures= 1,950/500,000 (0.390000%) disagreements_vs_sorted=810
+random           seed= 202610204 failures= 1,903/500,000 (0.380600%) disagreements_vs_sorted=761
+random           seed= 202610205 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610206 failures= 2,117/500,000 (0.423400%) disagreements_vs_sorted=977
+random           seed= 202610207 failures= 5,132/500,000 (1.026400%) disagreements_vs_sorted=4306
+random           seed= 202610208 failures= 2,117/500,000 (0.423400%) disagreements_vs_sorted=977
+random           seed= 202610209 failures= 4,896/500,000 (0.979200%) disagreements_vs_sorted=4116
+random           seed= 202610210 failures= 2,760/500,000 (0.552000%) disagreements_vs_sorted=1738
+random           seed= 202610211 failures= 1,903/500,000 (0.380600%) disagreements_vs_sorted=761
+random           seed= 202610212 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610213 failures= 1,903/500,000 (0.380600%) disagreements_vs_sorted=761
+random           seed= 202610214 failures= 2,593/500,000 (0.518600%) disagreements_vs_sorted=1571
+random           seed= 202610215 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610216 failures= 3,595/500,000 (0.719000%) disagreements_vs_sorted=2541
+random           seed= 202610217 failures= 4,751/500,000 (0.950200%) disagreements_vs_sorted=3995
+random           seed= 202610218 failures= 1,855/500,000 (0.371000%) disagreements_vs_sorted=735
+random           seed= 202610219 failures= 2,291/500,000 (0.458200%) disagreements_vs_sorted=1157
+random           seed= 202610220 failures= 2,291/500,000 (0.458200%) disagreements_vs_sorted=1157
+random           seed= 202610221 failures= 2,291/500,000 (0.458200%) disagreements_vs_sorted=1157
+random           seed= 202610222 failures= 3,717/500,000 (0.743400%) disagreements_vs_sorted=2909
+random           seed= 202610223 failures= 4,253/500,000 (0.850600%) disagreements_vs_sorted=3355
+random           seed= 202610224 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610225 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610226 failures= 4,452/500,000 (0.890400%) disagreements_vs_sorted=3518
+random           seed= 202610227 failures= 3,595/500,000 (0.719000%) disagreements_vs_sorted=2541
+random           seed= 202610228 failures= 1,855/500,000 (0.371000%) disagreements_vs_sorted=735
+random           seed= 202610229 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610230 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610231 failures= 3,408/500,000 (0.681600%) disagreements_vs_sorted=2394
+random           seed= 202610232 failures= 2,117/500,000 (0.423400%) disagreements_vs_sorted=977
+random           seed= 202610233 failures= 1,950/500,000 (0.390000%) disagreements_vs_sorted=810
+random           seed= 202610234 failures= 3,200/500,000 (0.640000%) disagreements_vs_sorted=2204
+random           seed= 202610235 failures= 4,896/500,000 (0.979200%) disagreements_vs_sorted=4116
+random           seed= 202610236 failures= 2,117/500,000 (0.423400%) disagreements_vs_sorted=977
+random           seed= 202610237 failures= 3,595/500,000 (0.719000%) disagreements_vs_sorted=2541
+random           seed= 202610238 failures= 7,601/500,000 (1.520200%) disagreements_vs_sorted=7031
+random           seed= 202610239 failures= 2,117/500,000 (0.423400%) disagreements_vs_sorted=977
+random           seed= 202610240 failures= 1,260/500,000 (0.252000%) disagreements_vs_sorted=0
+random           seed= 202610241 failures= 1,903/500,000 (0.380600%) disagreements_vs_sorted=761
+random           seed= 202610242 failures= 1,944/500,000 (0.388800%) disagreements_vs_sorted=796
+random           seed= 202610243 failures= 2,117/500,000 (0.423400%) disagreements_vs_sorted=977
+random           seed= 202610244 failures= 2,760/500,000 (0.552000%) disagreements_vs_sorted=1738
+random           seed= 202610245 failures= 3,595/500,000 (0.719000%) disagreements_vs_sorted=2541
+random           seed= 202610246 failures= 1,903/500,000 (0.380600%) disagreements_vs_sorted=761
+random           seed= 202610247 failures= 3,408/500,000 (0.681600%) disagreements_vs_sorted=2394
+random           seed= 202610248 failures= 1,903/500,000 (0.380600%) disagreements_vs_sorted=761
+random           seed= 202610249 failures= 1,950/500,000 (0.390000%) disagreements_vs_sorted=810
+
+Random-order distribution (each permutation decodes the SAME sampled syndromes):
+failure count min/median/max: 1260/2117/7601
+failure rate % min/median/max: 0.252000/0.423400/1.520200
+prediction disagreement vs canonical min/median/max: 0/977/7031
+
+==============================================================================
+p_corr=0.0002; physical sample seed=20261081
+DEM detectors=24; observables=1; error instructions=298
+canonical_sorted seed=           failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+original         seed=           failures= 5,437/500,000 (1.087400%) disagreements_vs_sorted=3902
+reversed         seed=           failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620200 failures= 4,275/500,000 (0.855000%) disagreements_vs_sorted=2538
+random           seed= 202620201 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620202 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620203 failures= 2,838/500,000 (0.567600%) disagreements_vs_sorted=831
+random           seed= 202620204 failures= 8,229/500,000 (1.645800%) disagreements_vs_sorted=7530
+random           seed= 202620205 failures= 4,275/500,000 (0.855000%) disagreements_vs_sorted=2538
+random           seed= 202620206 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620207 failures= 3,295/500,000 (0.659000%) disagreements_vs_sorted=1298
+random           seed= 202620208 failures= 4,092/500,000 (0.818400%) disagreements_vs_sorted=2331
+random           seed= 202620209 failures= 5,201/500,000 (1.040200%) disagreements_vs_sorted=3676
+random           seed= 202620210 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620211 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620212 failures= 5,000/500,000 (1.000000%) disagreements_vs_sorted=3449
+random           seed= 202620213 failures= 3,634/500,000 (0.726800%) disagreements_vs_sorted=1879
+random           seed= 202620214 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620215 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620216 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620217 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620218 failures= 5,201/500,000 (1.040200%) disagreements_vs_sorted=3676
+random           seed= 202620219 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620220 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620221 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620222 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620223 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620224 failures= 6,667/500,000 (1.333400%) disagreements_vs_sorted=5616
+random           seed= 202620225 failures= 5,923/500,000 (1.184600%) disagreements_vs_sorted=4606
+random           seed= 202620226 failures= 3,643/500,000 (0.728600%) disagreements_vs_sorted=1838
+random           seed= 202620227 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620228 failures= 4,092/500,000 (0.818400%) disagreements_vs_sorted=2331
+random           seed= 202620229 failures= 2,849/500,000 (0.569800%) disagreements_vs_sorted=792
+random           seed= 202620230 failures= 4,912/500,000 (0.982400%) disagreements_vs_sorted=3379
+random           seed= 202620231 failures= 2,849/500,000 (0.569800%) disagreements_vs_sorted=792
+random           seed= 202620232 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620233 failures= 2,791/500,000 (0.558200%) disagreements_vs_sorted=784
+random           seed= 202620234 failures= 5,201/500,000 (1.040200%) disagreements_vs_sorted=3676
+random           seed= 202620235 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620236 failures= 6,029/500,000 (1.205800%) disagreements_vs_sorted=4672
+random           seed= 202620237 failures= 4,089/500,000 (0.817800%) disagreements_vs_sorted=2366
+random           seed= 202620238 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620239 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620240 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620241 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+random           seed= 202620242 failures= 5,799/500,000 (1.159800%) disagreements_vs_sorted=4452
+random           seed= 202620243 failures= 5,786/500,000 (1.157200%) disagreements_vs_sorted=4489
+random           seed= 202620244 failures= 4,877/500,000 (0.975400%) disagreements_vs_sorted=3318
+random           seed= 202620245 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620246 failures= 3,587/500,000 (0.717400%) disagreements_vs_sorted=1832
+random           seed= 202620247 failures= 3,037/500,000 (0.607400%) disagreements_vs_sorted=1050
+random           seed= 202620248 failures= 4,089/500,000 (0.817800%) disagreements_vs_sorted=2366
+random           seed= 202620249 failures= 2,239/500,000 (0.447800%) disagreements_vs_sorted=0
+
+Random-order distribution (each permutation decodes the SAME sampled syndromes):
+failure count min/median/max: 2239/3037/8229
+failure rate % min/median/max: 0.447800/0.607400/1.645800
+prediction disagreement vs canonical min/median/max: 0/1050/7530
