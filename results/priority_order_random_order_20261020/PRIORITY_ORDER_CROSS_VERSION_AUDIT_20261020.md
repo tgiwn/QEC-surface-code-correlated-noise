@@ -76,4 +76,4 @@ The supported claim should remain narrow:
 - JSON SHA-256: `8674b372e475f2d085712a2a06818061d96e786c83b2340c5c1eedb304bbf5d2`
 - Log SHA-256: `4ff82e84b6269e3d22ac6c50f40544b23a559ded0666913b857d798d5ec830b0`
 
-Hashes above were reported from the user's local PowerShell output. Retain the raw files with this report in the repository so those values can be independently recomputed after checkout.
+The fingerprints above are SHA-256 values calculated from the original Windows working-copy files. Git may normalize text-file line endings when storing these artifacts, so the working-copy hashes and sizes can differ from the canonical Git-blob fingerprints recorded in `paper_evidence_manifest.csv`. Reproducing the working-copy fingerprints requires an equivalent checkout and line-ending configuration. The two committed CSV Git blobs are byte-identical, independently confirming equality of the saved summary tables in the repository. This does not establish shot-by-shot prediction identity between PyMatching versions.
