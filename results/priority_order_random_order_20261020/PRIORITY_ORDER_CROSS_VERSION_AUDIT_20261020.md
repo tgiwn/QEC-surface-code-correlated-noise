@@ -1,6 +1,6 @@
 # Ordinary MWPM randomized DEM input-order audit: cross-version report
 
-**Status:** completed local diagnostic; not yet committed to the public repository or incorporated into the manuscript.
+**Status:** committed to the public repository via PR #4 and summarized in the v18 working draft; v18 remains a working draft pending final technical review and has not been submitted.
 
 ## Objective
 
